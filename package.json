@@ -1,0 +1,70 @@
+{
+  "name": "spotify-lyrics",
+  "displayName": "Spotify Lyrics",
+  "description": "Play lyrics on vs code from your current playing music",
+  "version": "0.0.1",
+  "publisher": "BingVader",
+  "engines": {
+    "vscode": "^1.118.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onView:spotify-lyrics-view",
+    "onCommand:spotify-lyrics.login"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "spotify-lyrics.helloWorld",
+        "title": "Hello World"
+      },
+      {
+        "command": "spotify-lyrics.login",
+        "title": "Spotify Lyrics: Login"
+      },
+      {
+        "command": "spotify-lyrics.setup",
+        "title": "Spotify Lyrics: Setup Credentials"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "spotify-lyrics-sidebar",
+          "title": "Spotify Lyrics",
+          "icon": "$(music)"
+        }
+      ]
+    },
+    "views": {
+      "spotify-lyrics-sidebar": [
+        {
+          "type": "webview",
+          "id": "spotify-lyrics-view",
+          "name": "Lyrics"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "22.x",
+    "@types/vscode": "^1.118.0",
+    "@vscode/test-cli": "^0.0.12",
+    "@vscode/test-electron": "^2.5.2",
+    "eslint": "^9.39.3",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.56.1"
+  }
+}
