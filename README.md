@@ -10,6 +10,13 @@ Secure Storage: Your Spotify API keys are stored safely in the OS Keychain using
 
 DIY Privacy: Use your own Spotify Developer credentials—no middleman servers.
 
+## 📥 Installation
+1. Download the latest `.vsix` from the [Releases Page](https://github.com/RAO-THOMAS/spotify-lyrics/releases).
+2. In VS Code, go to the Extensions view (`Ctrl+Shift+X`).
+3. Click the `...` menu and select **Install from VSIX...**
+4. Select the downloaded file.
+
+
 🚀 Setup Instructions
 Because this extension uses the Spotify API directly, you need to link it to your own Spotify Developer App.
 
