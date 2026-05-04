@@ -18,7 +18,7 @@ async function setupCredentials(context: vscode.ExtensionContext) {
         await context.secrets.store('spotify_client_id', id);
         await context.secrets.store('spotify_client_secret', secret);
         CLIENT_ID = id; CLIENT_SECRET = secret;
-        vscode.window.showInformationMessage('Credentials saved securely in your OS keychain!');
+        vscode.window.showInformationMessage('Credentials saved securely in your Device!');
     }
 }
 

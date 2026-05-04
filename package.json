@@ -1,9 +1,13 @@
 {
-  "name": "spotify-lyrics",
-  "displayName": "Spotify Lyrics",
+  "name": "vs-lyrics",
+  "displayName": "VS Lyrics",
   "description": "Play lyrics on vs code from your current playing music",
   "version": "0.0.1",
   "publisher": "BingVader",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BingVader/VS-Lyricist.git"
+  },
   "engines": {
     "vscode": "^1.118.0"
   },
@@ -17,10 +21,6 @@
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
-      {
-        "command": "spotify-lyrics.helloWorld",
-        "title": "Hello World"
-      },
       {
         "command": "spotify-lyrics.login",
         "title": "Spotify Lyrics: Login"
